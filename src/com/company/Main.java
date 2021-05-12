@@ -3,6 +3,7 @@ package com.company;
 import java.awt.*;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -52,9 +53,29 @@ public class Main {
         System.out.print("Name: ");
         String name = scanner.nextLine();
 
+        /*******While ****************/
+        Scanner scanner2 = new Scanner(System.in);
+        String input ="";
+        while (!input.equals("quit")){
+            System.out.print("Enter name, quit to esc: ");
+            input = scanner2.nextLine().toLowerCase();
+            if (input.equals("pass")) continue;
+            if (input.equals("quit")) break;
+            System.out.println(input);
+        }
+        /*******For, For each ****************/
+        String[] fruits = {"Apple", "Mango", "Orange"};
+
+        //for
+        for (int i =0; i<fruits.length; i++)
+            System.out.println(fruits[i]);
+        
+        //foreach
+        for (String fruit:fruits)
+            System.out.println(fruit);
 
         // imprimir atajo sout
-        System.out.println("you are " + name);
+        //System.out.println("you are " + name);
         System.out.println(result);
         System.out.println(Arrays.toString(numbers2));
         System.out.println(message);
